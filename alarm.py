@@ -1,10 +1,25 @@
 import subprocess
+
 import time
+questions = [
+                ["A","Chicago is a \n A: City \n B: State \n C: Country"]
+            ]
 
 #plays the sound
 subprocess.call(["mpg123", "--loop", "10", "./alarm.mp3"])
 
-print("deb1")
+NotDone = 1
+while NotDone:
+    for item in questions:
+        print(item[1])
+        tries = 0
+        while tries < 3:
+            user_ans = input("Answer : ")
+
+            if questions[0] == user_ans.upper():
+                break
+
+            tries += 1
 
 #stops the alarm
 subprocess.call(["killall", "mpg123"])
