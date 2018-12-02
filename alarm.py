@@ -1,6 +1,6 @@
 import os
 import subprocess
-import playsound
+import playsound as ps
 
 questions = [
     ["A", "Chicago is a \n A: City \n B: State \n C: Country"]
@@ -10,7 +10,7 @@ questions = [
 # subprocess.call(["mpg123", './alarm.mp3'])
 #os.system("nohup mpg123 -q -o alsa ./alarm.mp3")
 
-playsound("alarm.mp3", 0)
+ps.playsound("alarm.mp3", 0)
 NotDone = 1
 while NotDone:
     for item in questions:
