@@ -1,12 +1,14 @@
+import os
 import subprocess
 
-import time
 questions = [
-                ["A","Chicago is a \n A: City \n B: State \n C: Country"]
-            ]
+    ["A", "Chicago is a \n A: City \n B: State \n C: Country"]
+]
 
-#plays the sound
-subprocess.call(["mpg123", "./alarm.mp3"])
+# plays the sound
+# subprocess.call(["mpg123", './alarm.mp3'])
+
+os.system("mpg123 ./alarm.mp3")
 
 NotDone = 1
 while NotDone:
@@ -16,14 +18,12 @@ while NotDone:
         while tries < 3:
             user_ans = input("Answer : ")
 
-            if questions[0] == user_ans.upper():
+            if item[0] == user_ans.upper():
                 break
 
             tries += 1
 
-#stops the alarm
+# stops the alarm
 subprocess.call(["killall", "mpg123"])
 
 print("deb2")
-
-
