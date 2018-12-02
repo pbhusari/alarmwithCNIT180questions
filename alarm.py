@@ -12,7 +12,7 @@ questions = [
 
 pygame.mixer.init()
 pygame.mixer.music.load("alarm.mp3")
-pygame.mixer.music.play()
+pygame.mixer.music.play(loops=-1)
 
 NotDone = 1
 while NotDone:
