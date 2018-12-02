@@ -6,7 +6,7 @@ questions = [
             ]
 
 #plays the sound
-subprocess.call(["mpg123", "--loop", "10", "./alarm.mp3"])
+subprocess.call(["mpg123", "./alarm.mp3"])
 
 NotDone = 1
 while NotDone:
