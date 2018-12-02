@@ -22,6 +22,8 @@ while NotDone:
                 break
 
             tries += 1
+    NotDone = 0
+
 
 # stops the alarm
 subprocess.call(["killall", "mpg123"])
