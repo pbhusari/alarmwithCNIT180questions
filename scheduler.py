@@ -6,7 +6,7 @@ mem_cron = CronTab(tab="""
   * * * * * command
 """)
 
-job = file_cron.new(command='/home/pranav/piproject/alarm.py')
+job = file_cron.new(command='/home/pranav/piproject/alarmwithCNIT180questions/alarm.py')
 
 job.setall(time(8, 30))
 
