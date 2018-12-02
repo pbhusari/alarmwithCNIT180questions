@@ -1,4 +1,4 @@
-from crontab import CronTab
+from python-crontab import CronTab
 from datetime import time
 
 file_cron = CronTab(tabfile='testtab.tab')
