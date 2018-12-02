@@ -8,7 +8,7 @@ questions = [
 # plays the sound
 # subprocess.call(["mpg123", './alarm.mp3'])
 
-os.system("mpg123 ./alarm.mp3")
+os.system("nohup mpg123 -q -o alsa ./alarm.mp3")
 
 NotDone = 1
 while NotDone:
@@ -28,4 +28,3 @@ while NotDone:
 # stops the alarm
 subprocess.call(["killall", "mpg123"])
 
-print("deb2")
