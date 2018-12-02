@@ -30,5 +30,5 @@ while NotDone:
 
 
 # stops the alarm
-subprocess.call(["killall", "mpg123"])
+# subprocess.call(["killall", "mpg123"])
 
