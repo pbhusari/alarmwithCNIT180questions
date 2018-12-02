@@ -1,6 +1,6 @@
 import os
 import subprocess
-import playsound as ps
+import pygame
 
 questions = [
     ["A", "Chicago is a \n A: City \n B: State \n C: Country"]
@@ -10,7 +10,10 @@ questions = [
 # subprocess.call(["mpg123", './alarm.mp3'])
 #os.system("nohup mpg123 -q -o alsa ./alarm.mp3")
 
-ps.playsound("alarm.mp3", 0)
+pygame.mixer.init()
+pygame.mixer.music.load("alarm.mp3")
+pygame.mixer.music.play()
+
 NotDone = 1
 while NotDone:
     for item in questions:
