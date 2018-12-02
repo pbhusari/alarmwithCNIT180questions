@@ -2,7 +2,7 @@ import subprocess
 import time
 
 #plays the sound
-subprocess.call(["mpg123", "--loop 10", "/home/pranav/alarm.mp3"])
+subprocess.Popen("mpg123 ~/alarm.mp3 --loop 10")
 
 time.sleep(10)
 
